@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // true
-- `user === newUser;` // true
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true - user value and new user value are equal
+- `user === newUser;` // true - copparing doubule equal and triple only if type is different than value is
+- `user.name === newUser.name;` // true - address is same
+- `user.name == newUser.name;` // true
+- `user.sibling == newUser.sibling;` // true
+- `user.sibling === newUser.sibling;` // true
+- `user.sibling == allBrothers;`// false -points to different address
+- `user.sibling === allBrothers;`// false
+- `brothersCopy === allBrothers;` // false 
+- `brothersCopy == allBrothers;` // false
+- `brothersCopy == user.sibling;` // true
+- `brothersCopy === user.sibling;` // true
+- `brothersCopy[0] === user.sibling[0];` // true it is primitve data type
+- `brothersCopy[1] === user.sibling[1];` // true - has the same value of ryan
+- `user.sibling[1] === newUser.sibling[1];`// true - points to same primitve data type
