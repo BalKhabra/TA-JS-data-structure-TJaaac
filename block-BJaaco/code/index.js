@@ -3,12 +3,36 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
-let collection = [...numbers, ...userIds]
-console.log(collections)
+let collection = []
+
+for (let num of numbers) {
+  collection.push(num);
+}
+for (let id of userIds) {
+  collection.push(id);
+}
+
+console.log(collection);
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
+let evenCollection = []
 
+for (let num of collection) {
+  if (num % 2 === 0) {
+    evenCollection.push(num);
+
+  }
+}
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
+let oddCollection = []
 
+for (let num of collection) {
+  if (num % 2 !== 0) {
+    oddCollection.push(num);
+
+  }
+}
+
+console.log(oddCollection, evenCollection);
 /*
   @param means parameter
 
@@ -25,8 +49,12 @@ console.log(collections)
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
-  // Your code
+function times(numOfTime, character) {
+  let final = []
+  for (let i = 0; i < noOfTime; i++){
+    final.push(character);
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
@@ -49,8 +77,11 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
+function revert(arr) {
+  for(let i = arr.lrngth -1; 1<= 0; i--){
+    final.push(arr[i]);
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
@@ -70,9 +101,23 @@ function revert() {
     clear(['a', undefined, 'd', 0,  'c', 'b']); // ['b', 'c', 'd', 'a']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
+function isUnwanted(value) {
+  return 
+  value == false ||
+  value == null ||
+  value == "" ||
+  value == undefined ||
+  value == 0 
+}
 
-function clear() {
-  // your code
+function clear(arr) {
+  let final =[];
+  for (let value of arr) {
+    if (!isUnwanted(value)) {
+      final.push(value);
+    }
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
@@ -94,8 +139,12 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
-  // your code
+function arrayToObj(arr) {
+ let final = {}
+ for(let i = 0; i < arr.lrngth; i++){
+   final[i] = arr [i];
+ }
+ return final;
 }
 
 // Uncomment the code below and test the output
